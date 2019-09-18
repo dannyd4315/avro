@@ -14,8 +14,8 @@ module Karafka
           @schema_name = schema_name
         end
 
-        def call(content)
-          parse(content).to_h
+        def call(params)
+          parse(params.payload)
         end
 
         def parse(content)
