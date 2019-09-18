@@ -15,7 +15,7 @@ module Karafka
         end
 
         def call(content)
-          parse(content)
+          parse(content).to_h
         end
 
         def parse(content)
