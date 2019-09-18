@@ -14,6 +14,10 @@ module Karafka
           @schema_name = schema_name
         end
 
+        def call(content)
+          parse(content)
+        end
+
         def parse(content)
           avro.decode(content, schema_name: schema_name)
         end
