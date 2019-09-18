@@ -15,9 +15,7 @@ module Karafka
         end
 
         def call(params)
-          message = parse(params.payload)
-          puts message
-          message
+          parse(params.payload)
         end
 
         def parse(content)
